@@ -1,10 +1,9 @@
-package com.codingdojo.dll;
 public class DLL {
 
         public Node head;
         public Node tail;
         
-        public DoublyLinkedList() {
+        public DLL() {
             this.head = null;
             this.tail = null;
         }
@@ -53,7 +52,6 @@ public class DLL {
         }
         public Node pop() {
             Node lastNode = this.tail;
-            lastNode.previous.next = null;
             this.tail = lastNode.previous;
             lastNode.previous = null;
             return lastNode;
@@ -62,19 +60,25 @@ public class DLL {
             Node current = this.head;
             while(current != null) {
                 if(current.value == value) {
+					System.out.println("Value found!");
                     return true;
                 }
-                current = current.next;
-            }
-            return false;
+				current = current.next;
+			}
+				System.out.println("Value not found!");
+            	return false;
         }
         public int size() {
-            int count = 0;
+			if(this.head == null);
+			System.out.println("No nodes!");
+			int count = 0;
             Node current = this.head;
             while(current != null) {
                 count++;
                 current = current.next;
-            }
+			}
+			System.out.println("A Total of" + count +"nodes found!");
             return count;
         }
-    }
+	}
+	

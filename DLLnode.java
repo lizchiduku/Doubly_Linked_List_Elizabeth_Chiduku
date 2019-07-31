@@ -1,4 +1,3 @@
-package com.codingdojo.dll;
 public class Node {
     public Integer value;
     public Node previous;

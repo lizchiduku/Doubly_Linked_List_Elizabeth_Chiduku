@@ -1,8 +1,8 @@
-package com.codingdojo.dll;
 public class DLLTest {
     public static void main(String[] args) {
+      
 		// TODO Auto-generated method stub
-        Dll dL = new Dll();
+        DLL dll = new DLL();
         Node n1 = new Node(10);
         Node n2 = new Node(20);
         Node n3 = new Node(50);
@@ -10,22 +10,20 @@ public class DLLTest {
         Node n5 = new Node(80);
         Node n6 = new Node(100);
         
-        dL.push(n1);
-        dL.push(n2);
-        dL.push(n3);
-        dL.push(n4);
-        dL.push(n5);
-        dL.push(n6);
+        dll.push(n1);
+        dll.push(n2);
+        dll.push(n3);
+        dll.push(n4);
+        dll.push(n5);
+        dll.push(n6);
         
-        dL.printValuesForward();
-        System.out.println(dL.contains(100));
-        System.out.println("Number of nodes in the list: " + dL.size());
-        dL.pop();
-        dL.printValuesForward();
-        dL.pop();
-        dL.printValuesForward();
-        System.out.println(dL.contains(100));
-        System.out.println("Number of nodes in the list: " + dL.size());
+        
+        dll.printValuesForward();
+        dll.pop();
+
+        dll.contains(80);
+        dll.contains(40);
+        dll.size();
 	}
 
 }
